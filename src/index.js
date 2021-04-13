@@ -17,6 +17,3 @@ const app = (
 )
 
 render(app, document.getElementById('root'))
-
-//todo: reset css
-//todo: empty html
