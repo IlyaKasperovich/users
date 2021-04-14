@@ -1,3 +1,3 @@
-import UserForm from "./UserFormComponent"
+import UserForm from "./UserFormComponent.jsx"
 
 export default UserForm

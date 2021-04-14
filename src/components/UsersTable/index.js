@@ -1,3 +1,3 @@
-import UsersTable from "./UsersTableComponent"
+import UsersTable from "./UsersTableContainer"
 
 export default UsersTable
