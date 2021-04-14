@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, compose } from 'redux'
 import rootReducer from './redux/rootReducer'
 import App from './components'
+import 'reset-css'
 
 const store = createStore(
   rootReducer,
