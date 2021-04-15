@@ -1,30 +1,35 @@
-import React from "react"
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  Redirect
-} from 'react-router-dom'
-import LoginForm from "./LoginForm"
-import UserForm from "./UserForm"
-import UsersTable from './UsersTable'
+  Redirect,
+} from 'react-router-dom';
+import LoginForm from './LoginForm';
+import UserForm from './UserForm';
+import UsersTable from './UsersTable';
 
+const App = () => (
+  <Router>
+    <div>
+      <Link to="/login">Login</Link>
+    </div>
+    <div>
+      <Link to="/user">User</Link>
+    </div>
+    <div>
+      <Link to="/users">Users</Link>
+    </div>
+    <Switch>
+      <Route exact path="/">
+        <Redirect to="/login" />
+      </Route>
+      <Route path="/login" component={LoginForm} />
+      <Route path="/users" component={UsersTable} />
+      <Route path="/user" component={UserForm} />
+    </Switch>
+  </Router>
+);
 
-const App = () => {
-  return (
-    <Router>
-      <div><Link to={'/login'}>Login</Link></div>
-      <div><Link to={'/user'}>User</Link></div>
-      <div><Link to={'/users'}>Users</Link></div>
-      <Switch>
-        <Route exact path="/"><Redirect to="/login"/></Route>
-        <Route path='/login' component={LoginForm}/>
-        <Route path='/users' component={UsersTable}/>
-        <Route path='/user' component={UserForm}/>
-      </Switch>
-    </Router>
-  )
-}
-
-export default App
+export default App;

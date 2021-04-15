@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { makeStyles } from '@material-ui/core/styles';
-import { tableColumnsConfig } from "src/configs/tableConfig"
+import tableColumnsConfig from 'src/configs/tableConfig';
 
 const useStyles = makeStyles({
   table: {
@@ -13,20 +13,23 @@ const useStyles = makeStyles({
   },
 });
 
-
 const UsersTable = ({ users }) => {
   const classes = useStyles();
   return (
     <Table className={classes.table} size="medium" aria-label="a dense table">
       <TableHead>
         <TableRow>
-          {tableColumnsConfig.map((title, i) => <TableCell key={i}>{title}</TableCell>)}
+          {tableColumnsConfig.map((title, i) => (
+            <TableCell key={i}>{title}</TableCell>
+          ))}
         </TableRow>
       </TableHead>
       <TableBody>
         {users.map((user, i) => (
           <TableRow key={i}>
-            <TableCell><img src={user.photo} alt={user.lastName}/></TableCell>
+            <TableCell>
+              <img src={user.photo} alt={user.lastName} />
+            </TableCell>
             <TableCell>{user.id}</TableCell>
             <TableCell>{user.firstName}</TableCell>
             <TableCell>{user.lastName}</TableCell>
@@ -35,7 +38,7 @@ const UsersTable = ({ users }) => {
         ))}
       </TableBody>
     </Table>
-  )
-}
+  );
+};
 
-export default UsersTable
+export default UsersTable;
