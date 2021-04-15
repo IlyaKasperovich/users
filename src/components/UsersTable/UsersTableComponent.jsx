@@ -4,6 +4,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import tableColumnsConfig from 'src/configs/tableConfig';
 
@@ -27,10 +28,10 @@ const UsersTable = ({ users }) => {
       <TableBody>
         {users.map((user, i) => (
           <TableRow key={i}>
-            <TableCell>
-              <img src={user.photo} alt={user.lastName} />
-            </TableCell>
             <TableCell>{user.id}</TableCell>
+            <TableCell>
+              <Avatar src={user.photo} alt={user.lastName} style={{ width: 70, height: 70 }} />
+            </TableCell>
             <TableCell>{user.firstName}</TableCell>
             <TableCell>{user.lastName}</TableCell>
             <TableCell>{user.email}</TableCell>
