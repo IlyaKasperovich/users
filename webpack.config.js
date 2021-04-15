@@ -8,6 +8,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js'
     },
+    resolve: {
+        alias: {//todo: may be exists another approach to set up absolute import
+            src: path.resolve(__dirname, 'src')
+        }
+    },
     module: {
         rules: [
             {

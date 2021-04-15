@@ -1,5 +1,5 @@
 import { SET_USERS } from "./types"
-import { usersList } from "../mocks/usersList";
+import { usersList } from "src/mocks/usersList";
 
 const initState = {
   usersList
