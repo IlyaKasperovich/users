@@ -21,7 +21,8 @@
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "react/jsx-filename-extension": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "object-curly-newline": "off"
   },
   "settings": {
     "import/resolver": "webpack"
