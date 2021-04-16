@@ -14,7 +14,7 @@ const Routes = () => (
       <Route path="/login" component={LoginForm} />
       <Layout>
         <Route path="/users" component={UsersTable} />
-        <Route path="/user" component={UserForm} />
+        <Route path="/user/:id" component={UserForm} />
       </Layout>
     </Switch>
   </Router>

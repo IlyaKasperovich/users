@@ -8,6 +8,8 @@ import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import tableColumnsConfig from 'src/configs/tableConfig';
 
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -39,6 +41,9 @@ const UsersTable = ({ users }) => {
             <TableCell>{user.firstName}</TableCell>
             <TableCell>{user.lastName}</TableCell>
             <TableCell>{user.email}</TableCell>
+            <TableCell>
+              <Link to={`/user/${user.id}`}>edit</Link>
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
