@@ -1,3 +1,3 @@
-import LoginForm from "./LoginFormComponent.jsx"
+import LoginForm from './LoginFormComponent';
 
-export default LoginForm
+export default LoginForm;

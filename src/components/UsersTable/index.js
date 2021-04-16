@@ -1,3 +1,3 @@
-import UsersTable from "./UsersTableContainer"
+import UsersTable from './UsersTableContainer';
 
-export default UsersTable
+export default UsersTable;

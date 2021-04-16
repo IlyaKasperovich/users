@@ -1,5 +1,6 @@
-import React from "react"
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const LoginForm = () => <div>Login Form</div>
+const LoginForm = () => <div><Link to="/users">Login</Link></div>;
 
-export default LoginForm
+export default LoginForm;
