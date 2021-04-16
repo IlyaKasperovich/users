@@ -4,6 +4,7 @@ import LoginForm from './LoginForm';
 import UserForm from './UserForm';
 import UsersTable from './UsersTable';
 import Layout from './Layout';
+import Home from './Home';
 
 const Routes = () => (
   <Router>
@@ -15,6 +16,7 @@ const Routes = () => (
       <Layout>
         <Route path="/users" component={UsersTable} />
         <Route path="/user/:id" component={UserForm} />
+        <Route path="/home" component={Home} />
       </Layout>
     </Switch>
   </Router>

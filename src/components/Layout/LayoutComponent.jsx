@@ -6,8 +6,8 @@ import Navigation from 'src/components/Navigation';
 import ToolBar from 'src/components/ToolBar';
 
 const Layout = ({ children }) => (
-  <Grid container className="gridContainer">
-    <Grid direction="row-reverse" item sx={12} className="toolBar">
+  <Grid container direction="row-reverse" className="gridContainer">
+    <Grid item sx={12} className="toolBar">
       <ToolBar />
     </Grid>
     <Grid container item sx={12}>
