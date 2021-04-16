@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
+    publicPath: '/',
   },
   devtool: 'inline-source-map',
   resolve: {
@@ -14,6 +15,9 @@ module.exports = {
       src: path.resolve(__dirname, 'src'),
     },
     extensions: ['.js', '.jsx'],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [
