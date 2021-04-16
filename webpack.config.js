@@ -11,7 +11,6 @@ module.exports = {
   devtool: 'inline-source-map',
   resolve: {
     alias: {
-      // todo: may be exists another approach to set up absolute import
       src: path.resolve(__dirname, 'src'),
     },
     extensions: ['.js', '.jsx'],

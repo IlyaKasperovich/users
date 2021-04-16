@@ -11,9 +11,7 @@ const Layout = ({ children }) => (
       <Navigation />
     </Grid>
     <Grid item xs={10}>
-      <Paper style={{ height: '100vh', overflow: 'auto' }}>
-        {children}
-      </Paper>
+      <Paper style={{ height: '100vh', overflow: 'auto' }}>{children}</Paper>
     </Grid>
   </Grid>
 );

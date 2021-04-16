@@ -10,7 +10,7 @@ import UserForm from './UserForm';
 import UsersTable from './UsersTable';
 import Layout from './Layout';
 
-const App = () => (
+const Routes = () => (
   <Router>
     <Switch>
       <Route exact path="/">
@@ -25,4 +25,4 @@ const App = () => (
   </Router>
 );
 
-export default App;
+export default Routes;

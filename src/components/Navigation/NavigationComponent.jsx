@@ -9,11 +9,15 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 const Navigation = () => (
   <List>
     <ListItem button>
-      <ListItemIcon><InboxIcon /></ListItemIcon>
+      <ListItemIcon>
+        <InboxIcon />
+      </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon><PeopleIcon /></ListItemIcon>
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
       <ListItemText primary="Users List" />
     </ListItem>
   </List>

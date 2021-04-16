@@ -30,7 +30,11 @@ const UsersTable = ({ users }) => {
           <TableRow key={i}>
             <TableCell>{user.id}</TableCell>
             <TableCell>
-              <Avatar src={user.photo} alt={user.lastName} style={{ width: 70, height: 70 }} />
+              <Avatar
+                src={user.photo}
+                alt={user.lastName}
+                style={{ width: 70, height: 70 }}
+              />
             </TableCell>
             <TableCell>{user.firstName}</TableCell>
             <TableCell>{user.lastName}</TableCell>
