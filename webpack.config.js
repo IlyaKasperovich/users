@@ -7,14 +7,17 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
+    publicPath: '/',
   },
   devtool: 'inline-source-map',
   resolve: {
     alias: {
-      // todo: may be exists another approach to set up absolute import
       src: path.resolve(__dirname, 'src'),
     },
     extensions: ['.js', '.jsx'],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [

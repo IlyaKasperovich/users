@@ -13,14 +13,17 @@
   },
   "plugins": ["react"],
   "rules": {
-    "no-console": "error",
+    "no-console": "off",
     "import/first": "error",
     "no-eval": "error",
     "react/prop-types": "off",
     "react/no-array-index-key": "off",
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "spaced-comment": "off"
   },
   "settings": {
     "import/resolver": "webpack"

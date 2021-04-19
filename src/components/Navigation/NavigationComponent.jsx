@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -8,14 +9,22 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 
 const Navigation = () => (
   <List>
-    <ListItem button>
-      <ListItemIcon><InboxIcon /></ListItemIcon>
-      <ListItemText primary="Home" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon><PeopleIcon /></ListItemIcon>
-      <ListItemText primary="Users List" />
-    </ListItem>
+    <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <ListItem button>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItem>
+    </Link>
+    <Link to="/users" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <ListItem button>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Users List" />
+      </ListItem>
+    </Link>
   </List>
 );
 

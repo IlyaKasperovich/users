@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, compose } from 'redux';
 import rootReducer from 'src/redux/rootReducer';
-import App from 'src/components';
+import Routes from 'src/components/Routes';
 import 'reset-css';
 
 const store = createStore(
@@ -15,7 +15,7 @@ const store = createStore(
 
 const app = (
   <Provider store={store}>
-    <App />
+    <Routes />
   </Provider>
 );
 
