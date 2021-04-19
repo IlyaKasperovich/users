@@ -23,7 +23,10 @@
     "react/jsx-filename-extension": "off",
     "linebreak-style": "off",
     "object-curly-newline": "off",
-    "spaced-comment": "off"
+    "spaced-comment": "off",
+    "react/jsx-boolean-value": "off",
+    "import/no-named-as-default": "off",
+    "no-case-declarations": "off"
   },
   "settings": {
     "import/resolver": "webpack"

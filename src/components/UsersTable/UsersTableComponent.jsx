@@ -15,8 +15,9 @@ const useStyles = makeStyles({
   },
 });
 
-const UsersTable = ({ users }) => {
+const UsersTable = ({ users, setSelectedUserId }) => {
   const classes = useStyles();
+
   return (
     <Table className={classes.table} size="medium" aria-label="a dense table">
       <TableHead>
@@ -37,7 +38,7 @@ const UsersTable = ({ users }) => {
                 style={{ width: 70, height: 70 }}
               />
             </TableCell>
-            <TableCell>
+            <TableCell onClick={() => setSelectedUserId(user.id)}>
               <Link
                 to={`/user/${user.id}`}
                 style={{ textDecoration: 'none', color: 'inherit' }}

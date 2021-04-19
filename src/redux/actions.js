@@ -1,11 +1,11 @@
-import { CREATE_USER, SET_USERS } from './types';
+import { SET_SELECTED_USER_ID, UPDATE_USER } from 'src/redux/types';
 
-export const createUser = (user) => ({
-  type: CREATE_USER,
-  payload: user,
+export const setSelectedUserId = (id) => ({
+  type: SET_SELECTED_USER_ID,
+  payload: id,
 });
 
-export const setUsers = (users) => ({
-  type: SET_USERS,
-  payload: users,
+export const updateUser = (user) => ({
+  type: UPDATE_USER,
+  payload: user,
 });

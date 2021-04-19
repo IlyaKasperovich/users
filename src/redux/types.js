@@ -1,2 +1,2 @@
-export const CREATE_USER = 'CREATE_USER';
-export const SET_USERS = 'SET_USERS';
+export const SET_SELECTED_USER_ID = 'SET_SELECTED_USER_ID';
+export const UPDATE_USER = 'UPDATE_USER';
