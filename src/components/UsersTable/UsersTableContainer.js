@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setUsers } from 'src/redux/actions';
+import { setSelectedUserId } from 'src/redux/actions';
 import UsersTable from './UsersTableComponent';
 
 export default connect(
@@ -11,6 +11,6 @@ export default connect(
     };
   },
   {
-    setUsers,
+    setSelectedUserId,
   },
 )(UsersTable);

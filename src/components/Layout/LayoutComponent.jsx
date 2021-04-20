@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
       <ToolBar />
     </Grid>
     <Grid container item sx={12}>
-      <Grid item xs={2}>
+      <Grid className="navigation" item xs={2}>
         <Navigation />
       </Grid>
       <Grid item xs={10} className="mainContent">

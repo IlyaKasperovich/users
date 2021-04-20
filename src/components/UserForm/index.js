@@ -1,3 +1,3 @@
-import UserForm from './UserFormComponent';
+import UserForm from './UserFormContainer';
 
 export default UserForm;
