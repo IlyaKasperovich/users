@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import './Layout.sass';
-
 import Navigation from 'src/components/Navigation';
 import ToolBar from 'src/components/ToolBar';
+import Snackbar from 'src/components/SnackBar';
+import './Layout.sass';
 
 const Layout = ({ children }) => (
   <Grid container direction="row-reverse" className="gridContainer">
@@ -18,6 +18,7 @@ const Layout = ({ children }) => (
         {children}
       </Grid>
     </Grid>
+    <Snackbar />
   </Grid>
 );
 

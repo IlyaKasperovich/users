@@ -3,11 +3,24 @@ import { Formik } from 'formik';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import userInfoConfig from 'src/configs/userInfoConfig';
+import defaultAvatar from 'src/mocks/defaultAvatar';
+import validationSchema from './validationSchema';
 import './UserForm.sass';
 
-const UserForm = ({ selectedUser, updateUser, history }) => {
+const UserForm = ({
+  selectedUser,
+  updateUsersTable,
+  clearSelectedUserId,
+  showNotification,
+  history,
+}) => {
   const onSubmit = useCallback((values) => {
-    updateUser(values);
+    const id = values.id
+      ? values.id
+      : +window.location.pathname.match(/[0-9]+$/g)[0];
+    updateUsersTable({ ...values, id });
+    clearSelectedUserId();
+    showNotification(values.id ? 'User is updated' : 'User is created');
     history.push('/users');
   }, []);
 
@@ -20,12 +33,17 @@ const UserForm = ({ selectedUser, updateUser, history }) => {
   }, []);
 
   const handleCancelClick = useCallback(() => {
+    clearSelectedUserId();
     history.push('/users');
   }, []);
 
   return (
-    <Formik initialValues={selectedUser} onSubmit={onSubmit}>
-      {({ handleSubmit, values, handleChange, setFieldValue }) => (
+    <Formik
+      initialValues={selectedUser}
+      onSubmit={onSubmit}
+      validationSchema={validationSchema}
+    >
+      {({ handleSubmit, values, handleChange, setFieldValue, errors }) => (
         <form onSubmit={handleSubmit}>
           <div className="fieldsContainer">
             <div className="avatarContainer">
@@ -52,6 +70,9 @@ const UserForm = ({ selectedUser, updateUser, history }) => {
                     onChange={handleChange}
                     fullWidth={true}
                   />
+                  {errors[title] && (
+                    <div className="fieldError">{errors[title]}</div>
+                  )}
                 </div>
               ))}
               <div className="formButtons">
@@ -68,6 +89,18 @@ const UserForm = ({ selectedUser, updateUser, history }) => {
       )}
     </Formik>
   );
+};
+
+UserForm.defaultProps = {
+  selectedUser: {
+    firstName: '',
+    lastName: '',
+    nickName: '',
+    age: '',
+    email: '',
+    phoneNumber: '',
+    photo: defaultAvatar,
+  },
 };
 
 export default UserForm;
