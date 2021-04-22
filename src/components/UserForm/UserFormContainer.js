@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { getSelectedUser } from 'src/redux/selectors';
-import { updateUser } from 'src/redux/actions';
+import { updateUsersTable, clearSelectedUserId, showNotification } from 'src/redux/actions';
 import UserForm from './UserFormComponent';
 
 export default connect(
@@ -8,6 +8,8 @@ export default connect(
     selectedUser: getSelectedUser(state),
   }),
   {
-    updateUser,
+    updateUsersTable,
+    clearSelectedUserId,
+    showNotification,
   },
 )(UserForm);
